@@ -6,7 +6,7 @@
       "name": "azsdktest",
       "type": "Microsoft.AnalysisServices/servers"
     },
-    "api-version": "2017-07-14"
+    "api-version": "1293-23-22"
   },
   "responses": {
     "200": {

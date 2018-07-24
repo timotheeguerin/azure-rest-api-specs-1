@@ -3,7 +3,7 @@
     "subscriptionId": "613192d7-503f-477a-9cfe-4efc3ee2bd60",
     "location": "West US",
     "operationId": "testoperationid",
-    "api-version": "2017-07-14"
+    "api-version": "1293-23-22"
   },
   "responses": {
     "200": {
