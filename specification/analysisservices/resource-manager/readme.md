@@ -29,15 +29,15 @@ openapi-type: arm
 tag: package-preview-1293-23
 ```
 
-
 ### Tag: package-preview-1293-23
 
 These settings apply only when `--tag=package-preview-1293-23` is specified on the command line.
 
-```yaml $(tag) == 'package-preview-1293-23'
+``` yaml $(tag) == 'package-preview-1293-23'
 input-file:
   - Microsoft.AnalysisServices/preview/1293-23-22/analysisservices.json
 ```
+
 ### Tag: package-2017-08
 
 These settings apply only when `--tag=package-2017-08` is specified on the command line.
@@ -176,4 +176,14 @@ java:
   license-header: MICROSOFT_MIT_NO_CODEGEN
   payload-flattening-threshold: 1
   output-folder: $(azure-libraries-for-java-folder)/azure-mgmt-analysisservices
+```
+
+## Suppression
+
+``` yaml
+directive:
+  - where: '$.paths["/subscriptions/{subscriptionId}/providers/Microsoft.AnalysisServices/skus"].get'
+    from: analysisservices.json
+    suppress: PageableOperation
+    reason: ''
 ```
