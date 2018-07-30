@@ -29,17 +29,17 @@ openapi-type: arm
 tag: package-2018-29
 ```
 
-
 ### Tag: package-2018-29
 
 These settings apply only when `--tag=package-2018-29` is specified on the command line.
 
-```yaml $(tag) == 'package-2018-29'
+``` yaml $(tag) == 'package-2018-29'
 input-file:
   - Microsoft.KeyVault/stable/2018-29-07/keyvault.json
   - Microsoft.KeyVault/stable/2018-29-07/providers.json
   - Microsoft.KeyVault/stable/2018-29-07/secrets.json
 ```
+
 ### Tag: package-2016-10
 
 These settings apply only when `--tag=package-2016-10` is specified on the command line.
@@ -157,4 +157,14 @@ java:
   license-header: MICROSOFT_MIT_NO_CODEGEN
   payload-flattening-threshold: 1
   output-folder: $(azure-libraries-for-java-folder)/azure-mgmt-keyvault
+```
+
+## Suppression
+
+``` yaml
+directive:
+  - where: '$.paths["/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}"].put'
+    from: keyvault.json
+    suppress: PutRequestResponseScheme
+    reason: suppress
 ```
