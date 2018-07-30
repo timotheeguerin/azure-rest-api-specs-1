@@ -167,4 +167,8 @@ directive:
     from: keyvault.json
     suppress: APIVersionPattern
     reason: suppress.
+  - where: '$.paths["/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}"].put'
+    from: keyvault.json
+    suppress: PutRequestResponseScheme
+    reason: hjikl
 ```
