@@ -4,10 +4,10 @@
 
 This is the AutoRest configuration file for KeyVault.
 
-
-
 ---
+
 ## Getting Started
+
 To build the SDK for KeyVault, simply [Install AutoRest](https://aka.ms/autorest/install) and in this folder, run:
 
 > `autorest`
@@ -15,21 +15,31 @@ To build the SDK for KeyVault, simply [Install AutoRest](https://aka.ms/autorest
 To see additional help and options, run:
 
 > `autorest --help`
+
 ---
 
 ## Configuration
 
-
-
 ### Basic Information
+
 These are the global settings for the KeyVault API.
 
 ``` yaml
 openapi-type: arm
-tag: package-2016-10
+tag: package-2018-30
 ```
 
 
+### Tag: package-2018-30
+
+These settings apply only when `--tag=package-2018-30` is specified on the command line.
+
+```yaml $(tag) == 'package-2018-30'
+input-file:
+  - Microsoft.KeyVault/stable/2018-30-07/keyvault.json
+  - Microsoft.KeyVault/stable/2018-30-07/providers.json
+  - Microsoft.KeyVault/stable/2018-30-07/secrets.json
+```
 ### Tag: package-2016-10
 
 These settings apply only when `--tag=package-2016-10` is specified on the command line.
@@ -40,7 +50,6 @@ input-file:
 - Microsoft.KeyVault/stable/2016-10-01/providers.json
 ```
 
-
 ### Tag: package-2015-06
 
 These settings apply only when `--tag=package-2015-06` is specified on the command line.
@@ -50,10 +59,9 @@ input-file:
 - Microsoft.KeyVault/stable/2015-06-01/keyvault.json
 ```
 
-
 ---
-# Code Generation
 
+# Code Generation
 
 ## Swagger to SDK
 
@@ -87,17 +95,18 @@ python:
   package-name: azure-mgmt-keyvault
   clear-output-folder: true
 ```
+
 ``` yaml $(python) && $(python-mode) == 'update'
 python:
   no-namespace-folders: true
   output-folder: $(python-sdks-folder)/azure-mgmt-keyvault/azure/mgmt/keyvault
 ```
+
 ``` yaml $(python) && $(python-mode) == 'create'
 python:
   basic-setup-py: true
   output-folder: $(python-sdks-folder)/azure-mgmt-keyvault
 ```
-
 
 ## Go
 
@@ -135,7 +144,6 @@ Please also specify `--go-sdk-folder=<path to the root directory of your azure-s
 ``` yaml $(tag) == 'package-2015-06' && $(go)
 output-folder: $(go-sdk-folder)/services/keyvault/mgmt/2015-06-01/keyvault
 ```
-
 
 ## Java
 
