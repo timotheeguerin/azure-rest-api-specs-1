@@ -3,7 +3,7 @@
   "info": {
     "title": "ServiceBusManagementClient",
     "description": "Azure Service Bus client",
-    "version": "2017-04-01"
+    "version": "2018-08-01"
   },
   "host": "management.azure.com",
   "schemes": [
