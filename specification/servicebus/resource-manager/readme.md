@@ -4,10 +4,10 @@
 
 This is the AutoRest configuration file for ServiceBus.
 
-
-
 ---
+
 ## Getting Started
+
 To build the SDK for ServiceBus, simply [Install AutoRest](https://aka.ms/autorest/install) and in this folder, run:
 
 > `autorest`
@@ -15,25 +15,32 @@ To build the SDK for ServiceBus, simply [Install AutoRest](https://aka.ms/autore
 To see additional help and options, run:
 
 > `autorest --help`
+
 ---
 
 ## Configuration
 
-
-
 ### Basic Information
+
 These are the global settings for the ServiceBus API.
 
 ``` yaml
 openapi-type: arm
-tag: package-2017-04
+tag: package-2018-08
 ```
 
 
+### Tag: package-2018-08
+
+These settings apply only when `--tag=package-2018-08` is specified on the command line.
+
+```yaml $(tag) == 'package-2018-08'
+input-file:
+  - Microsoft.ServiceBus/stable/2018-08-01/servicebus.json
+```
 ### Tag: package-2017-04
 
 These settings apply only when `--tag=package-2017-04` is specified on the command line.
-
 
 ``` yaml $(tag) == 'package-2017-04'
 input-file:
@@ -42,7 +49,7 @@ input-file:
 
 Important notes:
 On the advice of @fearthecowboy, the  `EncodingCaptureDescription` enum previously contained two values [`Avro`,`AvroDeflate`] ; the service has been changed (on 2018-01-17) and will not ever return the `AvroDeflate` value,
- however, we have left the value in the enum (in servicebus.json) so that existing clients won't suffer a binary breaking change
+however, we have left the value in the enum (in servicebus.json) so that existing clients won't suffer a binary breaking change
 The `AvroDeflate` value will likely be removed in a future API version, and at that a breaking binary change may happen.
 
 ### Tag: package-2015-08
@@ -54,10 +61,9 @@ input-file:
 - Microsoft.ServiceBus/stable/2015-08-01/servicebus.json
 ```
 
-
 ---
-# Code Generation
 
+# Code Generation
 
 ## Swagger to SDK
 
@@ -74,7 +80,6 @@ swagger-to-sdk:
     after_scripts:
       - bundle install && rake arm:regen_all_profiles['azure_mgmt_service_bus']
 ```
-
 
 ## C#
 
@@ -107,18 +112,18 @@ python:
   package-version: 0.5.0
   clear-output-folder: true
 ```
+
 ``` yaml $(python) && $(python-mode) == 'update'
 python:
   no-namespace-folders: true
   output-folder: $(python-sdks-folder)/azure-mgmt-servicebus/azure/mgmt/servicebus
 ```
+
 ``` yaml $(python) && $(python-mode) == 'create'
 python:
   basic-setup-py: true
   output-folder: $(python-sdks-folder)/azure-mgmt-servicebus
 ```
-
-
 
 ## Go
 
@@ -156,7 +161,6 @@ Please also specify `--go-sdk-folder=<path to the root directory of your azure-s
 ``` yaml $(tag) == 'package-2015-08' && $(go)
 output-folder: $(go-sdk-folder)/services/servicebus/mgmt/2015-08-01/servicebus
 ```
-
 
 ## Java
 
