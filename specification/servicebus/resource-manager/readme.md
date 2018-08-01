@@ -29,15 +29,15 @@ openapi-type: arm
 tag: package-2018-08
 ```
 
-
 ### Tag: package-2018-08
 
 These settings apply only when `--tag=package-2018-08` is specified on the command line.
 
-```yaml $(tag) == 'package-2018-08'
+``` yaml $(tag) == 'package-2018-08'
 input-file:
   - Microsoft.ServiceBus/stable/2018-08-01/servicebus.json
 ```
+
 ### Tag: package-2017-04
 
 These settings apply only when `--tag=package-2017-04` is specified on the command line.
@@ -175,4 +175,14 @@ java:
   license-header: MICROSOFT_MIT_NO_CODEGEN
   payload-flattening-threshold: 1
   output-folder: $(azure-libraries-for-java-folder)/azure-mgmt-servicebus
+```
+
+## Suppression
+
+``` yaml
+directive:
+  - where: '$.paths["/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/migrationConfigurations/{configName}/upgrade"].post.operationId'
+    from: servicebus.json
+    suppress: PostOperationIdContainsUrlVerb
+    reason: jsdkjdsa
 ```
