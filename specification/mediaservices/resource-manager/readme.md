@@ -29,15 +29,15 @@ openapi-type: arm
 tag: package-2018-07
 ```
 
-
 ### Tag: package-2018-07
 
 These settings apply only when `--tag=package-2018-07` is specified on the command line.
 
-```yaml $(tag) == 'package-2018-07'
+``` yaml $(tag) == 'package-2018-07'
 input-file:
   - Microsoft.Media/stable/2018-07-08/media.json
 ```
+
 ### Tag: package-2015-10
 
 These settings apply only when `--tag=package-2015-10` is specified on the command line.
@@ -176,4 +176,14 @@ java:
   license-header: MICROSOFT_MIT_NO_CODEGEN
   payload-flattening-threshold: 1
   output-folder: $(azure-libraries-for-java-folder)/azure-mgmt-mediaservices
+```
+
+## Suppression
+
+``` yaml
+directive:
+  - where: '$.paths["/providers/Microsoft.Media/operations"].get'
+    from: media.json
+    suppress: PageableOperation
+    reason: suppress
 ```
