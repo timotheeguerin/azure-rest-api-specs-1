@@ -4,7 +4,7 @@
     "resourceGroupName": "contoso",
     "accountName": "contosomedia",
     "contentKeyPolicyName": "PolicyWithClearKeyOptionAndTokenRestriction",
-    "api-version": "2018-03-30-preview",
+    "api-version": "2018-08-06",
     "parameters": {
       "properties": {
         "description": "Updated Policy",

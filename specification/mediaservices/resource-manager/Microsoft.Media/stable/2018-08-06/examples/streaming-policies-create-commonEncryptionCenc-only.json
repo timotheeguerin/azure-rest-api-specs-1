@@ -4,7 +4,7 @@
     "resourceGroupName": "contoso",
     "accountName": "contosomedia",
     "streamingPolicyName": "UserCreatedSecureStreamingPolicyWithCommonEncryptionCencOnly",
-    "api-version": "2018-03-30-preview",
+    "api-version": "2018-08-06",
     "parameters": {
       "properties": {
         "defaultContentKeyPolicyName": "PolicyWithPlayReadyOptionAndOpenRestriction",
