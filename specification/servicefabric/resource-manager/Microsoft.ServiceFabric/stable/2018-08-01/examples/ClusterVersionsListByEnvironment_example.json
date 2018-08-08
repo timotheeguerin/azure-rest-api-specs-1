@@ -2,7 +2,7 @@
   "parameters": {
     "location": "westus",
     "environment": "Windows",
-    "api-version": "2016-09-01",
+    "api-version": "2018-08-01",
     "subscriptionId": "00000000-0000-0000-0000-000000000000"
   },
   "responses": {
