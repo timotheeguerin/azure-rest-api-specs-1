@@ -3,7 +3,7 @@
   "info": {
     "title": "ServiceFabricManagementClient",
     "description": "Azure Service Fabric Resource Provider API Client",
-    "version": "2017-07-01-preview"
+    "version": "2018-07-01"
   },
   "host": "management.azure.com",
   "schemes": [
@@ -2042,13 +2042,13 @@
     "api-version": {
       "name": "api-version",
       "in": "query",
-      "description": "The version of the Service Fabric resource provider API. This is a required parameter and it's value must be \"2017-07-01-preview\" for this specification.",
+      "description": "The version of the Service Fabric resource provider API. This is a required parameter and it's value must be \"2018-07-01\" for this specification.",
       "required": true,
       "type": "string",
       "enum": [
-        "2017-07-01-preview"
+        "2018-07-01"
       ],
-      "default": "2017-07-01-preview",
+      "default": "2018-07-01",
       "x-ms-parameter-location": "client"
     },
     "applicationName": {
