@@ -29,15 +29,15 @@ openapi-type: arm
 tag: package-2018-04
 ```
 
-
 ### Tag: package-2018-04
 
 These settings apply only when `--tag=package-2018-04` is specified on the command line.
 
-```yaml $(tag) == 'package-2018-04'
+``` yaml $(tag) == 'package-2018-04'
 input-file:
   - Microsoft.Addons/stable/2018-04-02/addons-swagger.json
 ```
+
 ### Tag: package-2018-03
 
 These settings apply only when `--tag=package-2018-03` is specified on the command line.
@@ -155,4 +155,14 @@ java:
   license-header: MICROSOFT_MIT_NO_CODEGEN
   payload-flattening-threshold: 1
   output-folder: $(azure-libraries-for-java-folder)/azure-mgmt-addons
+```
+
+## Suppression
+
+``` yaml
+directive:
+  - where: '$.paths["/subscriptions/{subscriptionId}/providers/Microsoft.Addons/supportProviders/canonical/listSupportPlanInfo"].post.operationId'
+    from: addons-swagger.json
+    suppress: PostOperationIdContainsUrlVerb
+    reason: dsa
 ```
