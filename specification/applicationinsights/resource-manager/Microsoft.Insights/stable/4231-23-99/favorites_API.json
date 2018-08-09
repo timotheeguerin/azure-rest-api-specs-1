@@ -3,7 +3,7 @@
   "info": {
     "title": "ApplicationInsightsManagementClient",
     "description": "Azure Application Insights client for favorites.",
-    "version": "2015-05-01"
+    "version": "4231-23-99"
   },
   "host": "management.azure.com",
   "schemes": [
