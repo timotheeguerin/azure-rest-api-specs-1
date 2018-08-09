@@ -4,10 +4,10 @@
 
 This is the AutoRest configuration file for ContainerInstance.
 
-
-
 ---
+
 ## Getting Started
+
 To build the SDK for ContainerInstance, simply [Install AutoRest](https://aka.ms/autorest/install) and in this folder, run:
 
 > `autorest`
@@ -15,20 +15,29 @@ To build the SDK for ContainerInstance, simply [Install AutoRest](https://aka.ms
 To see additional help and options, run:
 
 > `autorest --help`
+
 ---
 
 ## Configuration
 
-
-
 ### Basic Information
+
 These are the global settings for the ContainerInstance API.
 
 ``` yaml
 openapi-type: arm
-tag: package-2018-06
+tag: package-4321-23
 ```
 
+
+### Tag: package-4321-23
+
+These settings apply only when `--tag=package-4321-23` is specified on the command line.
+
+```yaml $(tag) == 'package-4321-23'
+input-file:
+  - Microsoft.ContainerInstance/stable/4321-23-32/containerInstance.json
+```
 ### Tag: package-2018-06
 
 These settings apply only when `--tag=package-2018-06` is specified on the command line.
@@ -65,7 +74,6 @@ input-file:
 - Microsoft.ContainerInstance/preview/2017-12-01-preview/containerInstance.json
 ```
 
-
 ### Tag: package-2017-10-preview
 
 These settings apply only when `--tag=package-2017-10-preview` is specified on the command line.
@@ -74,7 +82,6 @@ These settings apply only when `--tag=package-2017-10-preview` is specified on t
 input-file:
 - Microsoft.ContainerInstance/preview/2017-10-01-preview/containerInstance.json
 ```
-
 
 ### Tag: package-2017-08-preview
 
@@ -85,10 +92,9 @@ input-file:
 - Microsoft.ContainerInstance/preview/2017-08-01-preview/containerInstance.json
 ```
 
-
 ---
-# Code Generation
 
+# Code Generation
 
 ## Swagger to SDK
 
@@ -106,7 +112,6 @@ swagger-to-sdk:
       - bundle install && rake arm:regen_all_profiles['azure_mgmt_container_instance']
 ```
 
-
 ## C#
 
 These settings apply only when `--csharp` is specified on the command line.
@@ -121,7 +126,6 @@ csharp:
   output-folder: $(csharp-sdks-folder)/ContainerInstance/Management.ContainerInstance/Generated
   clear-output-folder: true
 ```
-
 
 ## Python
 
@@ -140,17 +144,18 @@ python:
   package-version: 1.0.0
   clear-output-folder: true
 ```
+
 ``` yaml $(python) && $(python-mode) == 'update'
 python:
   no-namespace-folders: true
   output-folder: $(python-sdks-folder)/azure-mgmt-containerinstance/azure/mgmt/containerinstance
 ```
+
 ``` yaml $(python) && $(python-mode) == 'create'
 python:
   basic-setup-py: true
   output-folder: $(python-sdks-folder)/azure-mgmt-containerinstance
 ```
-
 
 ## Go
 
@@ -228,7 +233,6 @@ Please also specify `--go-sdk-folder=<path to the root directory of your azure-s
 ``` yaml $(tag) == 'package-2017-08-preview' && $(go)
 output-folder: $(go-sdk-folder)/services/preview/containerinstance/mgmt/2017-08-01-preview/containerinstance
 ```
-
 
 ## Java
 
@@ -319,5 +323,3 @@ java:
 regenerate-manager: true
 generate-interface: true
 ```
-
-
