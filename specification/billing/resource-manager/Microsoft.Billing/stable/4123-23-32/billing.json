@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "version": "2018-03-01-preview",
+    "version": "4123-23-32",
     "title": "BillingManagementClient",
     "description": "Billing client provides access to billing resources for Azure subscriptions."
   },
@@ -676,7 +676,7 @@
       "in": "query",
       "required": true,
       "type": "string",
-      "description": "Version of the API to be used with the client request. The current version is 2018-03-01-preview."
+      "description": "Version of the API to be used with the client request. The current version is 4123-23-32."
     },
     "subscriptionIdParameter": {
       "name": "subscriptionId",
