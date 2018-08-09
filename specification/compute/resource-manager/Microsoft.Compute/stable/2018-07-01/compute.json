@@ -3,7 +3,7 @@
   "info": {
     "title": "ComputeManagementClient",
     "description": "The Compute Management Client.",
-    "version": "2015-06-15"
+    "version": "2018-07-01"
   },
   "host": "management.azure.com",
   "schemes": [
@@ -3426,7 +3426,7 @@
         },
         "encryptionSettings": {
           "$ref": "#/definitions/DiskEncryptionSettings",
-          "description": "Specifies the encryption settings for the OS Disk. <br><br> Minimum api-version: 2015-06-15"
+          "description": "Specifies the encryption settings for the OS Disk. <br><br> Minimum api-version: 2018-07-01"
         },
         "name": {
           "type": "string",
@@ -3784,7 +3784,7 @@
           "description": "Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. <br><br> For Linux Virtual Machines, you can easily view the output of your console log. <br><br> For both Windows and Linux virtual machines, Azure also enables you to see a screenshot of the VM from the hypervisor."
         }
       },
-      "description": "Specifies the boot diagnostic settings state. <br><br>Minimum api-version: 2015-06-15."
+      "description": "Specifies the boot diagnostic settings state. <br><br>Minimum api-version: 2018-07-01."
     },
     "VirtualMachineExtensionHandlerInstanceView": {
       "properties": {
@@ -3923,7 +3923,7 @@
         },
         "diagnosticsProfile": {
           "$ref": "#/definitions/DiagnosticsProfile",
-          "description": "Specifies the boot diagnostic settings state. <br><br>Minimum api-version: 2015-06-15."
+          "description": "Specifies the boot diagnostic settings state. <br><br>Minimum api-version: 2018-07-01."
         },
         "availabilitySet": {
           "$ref": "#/definitions/SubResource",
@@ -3941,7 +3941,7 @@
         },
         "licenseType": {
           "type": "string",
-          "description": "Specifies that the image or disk that is being used was licensed on-premises. This element is only used for images that contain the Windows Server operating system. <br><br> Possible values are: <br><br> Windows_Client <br><br> Windows_Server <br><br> If this element is included in a request for an update, the value must match the initial value. This value cannot be updated. <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) <br><br> Minimum api-version: 2015-06-15"
+          "description": "Specifies that the image or disk that is being used was licensed on-premises. This element is only used for images that contain the Windows Server operating system. <br><br> Possible values are: <br><br> Windows_Client <br><br> Windows_Server <br><br> If this element is included in a request for an update, the value must match the initial value. This value cannot be updated. <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) <br><br> Minimum api-version: 2018-07-01"
 
         }
       },
@@ -4583,7 +4583,7 @@
         },
         "diagnosticsProfile": {
           "$ref": "#/definitions/DiagnosticsProfile",
-          "description": "Specifies the boot diagnostic settings state. <br><br>Minimum api-version: 2015-06-15."
+          "description": "Specifies the boot diagnostic settings state. <br><br>Minimum api-version: 2018-07-01."
         },
         "availabilitySet": {
           "$ref": "#/definitions/SubResource",
@@ -4595,7 +4595,7 @@
         },
         "licenseType": {
           "type": "string",
-          "description": "Specifies that the image or disk that is being used was licensed on-premises. This element is only used for images that contain the Windows Server operating system. <br><br> Possible values are: <br><br> Windows_Client <br><br> Windows_Server <br><br> If this element is included in a request for an update, the value must match the initial value. This value cannot be updated. <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) <br><br> Minimum api-version: 2015-06-15"
+          "description": "Specifies that the image or disk that is being used was licensed on-premises. This element is only used for images that contain the Windows Server operating system. <br><br> Possible values are: <br><br> Windows_Client <br><br> Windows_Server <br><br> If this element is included in a request for an update, the value must match the initial value. This value cannot be updated. <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) <br><br> Minimum api-version: 2018-07-01"
         }
       },
       "description": "Describes the properties of a virtual machine scale set virtual machine."
