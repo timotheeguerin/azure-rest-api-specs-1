@@ -165,4 +165,8 @@ directive:
     from: addons-swagger.json
     suppress: PostOperationIdContainsUrlVerb
     reason: dsa
+  - where: $.definitions.CanonicalSupportPlanInfoDefinition.properties.enabled
+    from: addons-swagger.json
+    suppress: EnumInsteadOfBoolean
+    reason: Suppress.
 ```
