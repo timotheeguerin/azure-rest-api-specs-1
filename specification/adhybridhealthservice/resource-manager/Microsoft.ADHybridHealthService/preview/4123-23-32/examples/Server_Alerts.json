@@ -3,7 +3,7 @@
     "serviceName": "sampleServiceName",
     "serviceMemberId": "SampleServiceMemberId",
     "state": "Active", 
-    "api-version": "2014-01-01"
+    "api-version": "4123-23-32"
   },
   "responses": {
     "200": {
