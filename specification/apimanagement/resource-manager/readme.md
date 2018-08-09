@@ -4,10 +4,10 @@
 
 This is the AutoRest configuration file for ApiManagement.
 
-
-
 ---
+
 ## Getting Started
+
 To build the SDK for ApiManagement, simply [Install AutoRest](https://aka.ms/autorest/install) and in this folder, run:
 
 > `autorest`
@@ -15,22 +15,55 @@ To build the SDK for ApiManagement, simply [Install AutoRest](https://aka.ms/aut
 To see additional help and options, run:
 
 > `autorest --help`
+
 ---
 
 ## Configuration
 
-
-
 ### Basic Information
+
 These are the global settings for the ApiManagement API.
 
 ``` yaml
 title: ApiManagementClient
 description: ApiManagement Client
 openapi-type: arm
-tag: package-2018-06-preview
+tag: package-3241-32
 ```
 
+
+### Tag: package-3241-32
+
+These settings apply only when `--tag=package-3241-32` is specified on the command line.
+
+```yaml $(tag) == 'package-3241-32'
+input-file:
+  - Microsoft.ApiManagement/stable/3241-32-32/apimanagement.json
+  - Microsoft.ApiManagement/stable/3241-32-32/apimapis.json
+  - Microsoft.ApiManagement/stable/3241-32-32/apimauthorizationservers.json
+  - Microsoft.ApiManagement/stable/3241-32-32/apimbackends.json
+  - Microsoft.ApiManagement/stable/3241-32-32/apimcertificates.json
+  - Microsoft.ApiManagement/stable/3241-32-32/apimdeployment.json
+  - Microsoft.ApiManagement/stable/3241-32-32/apimdiagnostics.json
+  - Microsoft.ApiManagement/stable/3241-32-32/apimemailtemplate.json
+  - Microsoft.ApiManagement/stable/3241-32-32/apimgroups.json
+  - Microsoft.ApiManagement/stable/3241-32-32/apimidentityprovider.json
+  - Microsoft.ApiManagement/stable/3241-32-32/apimloggers.json
+  - Microsoft.ApiManagement/stable/3241-32-32/apimnetworkstatus.json
+  - Microsoft.ApiManagement/stable/3241-32-32/apimnotifications.json
+  - Microsoft.ApiManagement/stable/3241-32-32/apimopenidconnectproviders.json
+  - Microsoft.ApiManagement/stable/3241-32-32/apimportalsettings.json
+  - Microsoft.ApiManagement/stable/3241-32-32/apimproducts.json
+  - Microsoft.ApiManagement/stable/3241-32-32/apimproperties.json
+  - Microsoft.ApiManagement/stable/3241-32-32/apimquotas.json
+  - Microsoft.ApiManagement/stable/3241-32-32/apimreports.json
+  - Microsoft.ApiManagement/stable/3241-32-32/apimsubscriptions.json
+  - Microsoft.ApiManagement/stable/3241-32-32/apimtagresources.json
+  - Microsoft.ApiManagement/stable/3241-32-32/apimtags.json
+  - Microsoft.ApiManagement/stable/3241-32-32/apimtenant.json
+  - Microsoft.ApiManagement/stable/3241-32-32/apimusers.json
+  - Microsoft.ApiManagement/stable/3241-32-32/apimversionsets.json
+```
 ### Tag: package-2018-06-preview
 
 These settings apply only when `--tag=package-2018-06-preview` is specified on the command line.
@@ -65,6 +98,7 @@ input-file:
 ```
 
 ## Suppression
+
 ``` yaml
 directive:
   - suppress: R3016
@@ -109,6 +143,7 @@ input-file:
 ```
 
 ## Suppression
+
 ``` yaml
 directive:
   - suppress: R3016
@@ -152,7 +187,6 @@ input-file:
 - Microsoft.ApiManagement/stable/2017-03-01/apimversionsets.json
 ```
 
-
 ### Tag: package-2016-10
 
 These settings apply only when `--tag=package-2016-10` is specified on the command line.
@@ -190,8 +224,8 @@ input-file:
 ```
 
 ---
-# Code Generation
 
+# Code Generation
 
 ## Swagger to SDK
 
@@ -209,7 +243,6 @@ swagger-to-sdk:
     after_scripts:
       - bundle install && rake arm:regen_all_profiles['azure_mgmt_api_management']
 ```
-
 
 ## C#
 
@@ -296,7 +329,6 @@ Please also specify `--go-sdk-folder=<path to the root directory of your azure-s
 output-folder: $(go-sdk-folder)/services/apimanagement/mgmt/2016-07-07/apimanagement
 ```
 
-
 ## Java
 
 These settings apply only when `--java` is specified on the command line.
@@ -372,5 +404,3 @@ java:
 regenerate-manager: true
 generate-interface: true
 ```
-
-
