@@ -27,7 +27,7 @@
         "name": "roleDefinitionId"
       }
     },
-    "api-version": "2015-07-01"
+    "api-version": "4321-32-23"
   },
   "responses": {
     "201": {
