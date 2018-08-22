@@ -36,7 +36,7 @@
     }
   },
   "paths": {
-    "/subscriptions/{subscriptionId}/providers/Microsoft.Authorization/classicAdministrators": {
+    "/subscriptions/{subscriptionId}/providers/Microsoft.Authorization/classicAdministratorslol": {
       "get": {
         "tags": [
           "ClassicAdministrators"
