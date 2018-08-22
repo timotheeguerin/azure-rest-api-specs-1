@@ -4,10 +4,10 @@
 
 This is the AutoRest configuration file for Authorization.
 
-
-
 ---
+
 ## Getting Started
+
 To build the SDK for Authorization, simply [Install AutoRest](https://aka.ms/autorest/install) and in this folder, run:
 
 > `autorest`
@@ -15,21 +15,22 @@ To build the SDK for Authorization, simply [Install AutoRest](https://aka.ms/aut
 To see additional help and options, run:
 
 > `autorest --help`
+
 ---
 
 ## Configuration
 
-
-
 ### Basic Information
+
 These are the global settings for the Authorization API.
 
 ``` yaml
 openapi-type: arm
-tag: package-2018-01-01-preview
+tag: package-4321-23
 ```
 
 ## Suppression
+
 ``` yaml
 directive:
   - suppress: OperationsAPIImplementation
@@ -39,6 +40,16 @@ directive:
 
 ```
 
+
+### Tag: package-4321-23
+
+These settings apply only when `--tag=package-4321-23` is specified on the command line.
+
+```yaml $(tag) == 'package-4321-23'
+input-file:
+  - Microsoft.Authorization/stable/4321-23-23/authorization-ClassicAdminCalls.json
+  - Microsoft.Authorization/stable/4321-23-23/authorization.json
+```
 ### Tag: package-2015-07
 
 These settings apply only when `--tag=package-2015-07` is specified on the command line.
@@ -116,8 +127,8 @@ input-file:
 ```
 
 ---
-# Code Generation
 
+# Code Generation
 
 ## Swagger to SDK
 
