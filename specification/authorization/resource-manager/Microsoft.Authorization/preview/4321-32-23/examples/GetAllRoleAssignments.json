@@ -1,7 +1,7 @@
 {
   "parameters": {
     "subscriptionId": "subId",
-    "api-version": "4321-32-23"
+    "api-version": "4321-32-23ra"
   },
   "responses": {
     "200": {
