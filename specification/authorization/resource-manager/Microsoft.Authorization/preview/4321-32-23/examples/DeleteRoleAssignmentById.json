@@ -8,7 +8,7 @@
     "200": {
       "body": {
         "properties": {
-          "roleDefinitionId": "/subscriptions/subId/providers/Microsoft.Authorization/roleDefinitions/roledefinitionId",
+          "roleDefiasdfnitionId": "/subscriptions/subId/providers/Microsoft.Authorization/roleDefinitions/roledefinitionId",
           "principalId": "Pid",
           "scope": "/subscriptions/subId/resourcegroups/rgname"
         },
