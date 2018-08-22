@@ -80,10 +80,6 @@
         "emailAddress": {
           "type": "string",
           "description": "The email address of the administrator."
-        },
-        "roled": {
-          "type": "string",
-          "description": "The role of the administrator."
         }
       },
       "description": "Classic Administrator properties."
