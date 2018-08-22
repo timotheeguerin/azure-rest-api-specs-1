@@ -81,7 +81,7 @@
           "type": "string",
           "description": "The email address of the administrator."
         },
-        "role": {
+        "roled": {
           "type": "string",
           "description": "The role of the administrator."
         }
