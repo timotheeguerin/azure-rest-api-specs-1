@@ -81,7 +81,7 @@
         "tags": [
           "Permissions"
         ],
-        "operationId": "Permissions_ListForResource",
+        "operationId": "Permissions_ListForResourceGroup",
         "description": "Gets all permissions the caller has for a resource.",
         "parameters": [
           {
@@ -151,7 +151,7 @@
         "tags": [
           "ProviderOperationsMetadata"
         ],
-        "operationId": "ProviderOperationsMetadata_Get",
+        "operationId": "Permissions_ListForResourceGroup",
         "description": "Gets provider operations metadata for the specified resource provider.",
         "parameters": [
           {
