@@ -1,6 +1,5 @@
 {
   "parameters": {
-    "scope": "scope",
     "api-version": "2021-01-01-preview"
   },
   "responses": {
