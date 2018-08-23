@@ -4,10 +4,10 @@
 
 This is the AutoRest configuration file for Commerce.
 
-
-
 ---
+
 ## Getting Started
+
 To build the SDK for Commerce, simply [Install AutoRest](https://aka.ms/autorest/install) and in this folder, run:
 
 > `autorest`
@@ -15,21 +15,29 @@ To build the SDK for Commerce, simply [Install AutoRest](https://aka.ms/autorest
 To see additional help and options, run:
 
 > `autorest --help`
+
 ---
 
 ## Configuration
 
-
-
 ### Basic Information
+
 These are the global settings for the Commerce API.
 
 ``` yaml
 openapi-type: arm
-tag: package-2015-06-preview
+tag: package-2016-08
 ```
 
 
+### Tag: package-2016-08
+
+These settings apply only when `--tag=package-2016-08` is specified on the command line.
+
+```yaml $(tag) == 'package-2016-08'
+input-file:
+  - Microsoft.Commerce/stable/2016-08-01/commerce.json
+```
 ### Tag: package-2015-06-preview
 
 These settings apply only when `--tag=package-2015-06-preview` is specified on the command line.
@@ -40,8 +48,8 @@ input-file:
 ```
 
 ---
-# Code Generation
 
+# Code Generation
 
 ## Swagger to SDK
 
@@ -59,7 +67,6 @@ swagger-to-sdk:
       - bundle install && rake arm:regen_all_profiles['azure_mgmt_commerce']
 ```
 
-
 ## Python
 
 These settings apply only when `--python` is specified on the command line.
@@ -76,17 +83,18 @@ python:
   package-name: azure-mgmt-commerce
   clear-output-folder: true
 ```
+
 ``` yaml $(python) && $(python-mode) == 'update'
 python:
   no-namespace-folders: true
   output-folder: $(python-sdks-folder)/azure-mgmt-commerce/azure/mgmt/commerce
 ```
+
 ``` yaml $(python) && $(python-mode) == 'create'
 python:
   basic-setup-py: true
   output-folder: $(python-sdks-folder)/azure-mgmt-commerce
 ```
-
 
 ## Go
 
@@ -114,7 +122,6 @@ Please also specify `--go-sdk-folder=<path to the root directory of your azure-s
 ``` yaml $(tag) == 'package-2015-06-preview' && $(go)
 output-folder: $(go-sdk-folder)/services/preview/commerce/mgmt/2015-06-01-preview/commerce
 ```
-
 
 ## Java
 
@@ -149,5 +156,3 @@ java:
 regenerate-manager: true
 generate-interface: true
 ```
-
-
