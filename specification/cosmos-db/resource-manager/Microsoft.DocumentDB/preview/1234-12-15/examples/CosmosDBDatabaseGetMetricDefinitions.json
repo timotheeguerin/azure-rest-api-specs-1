@@ -3,7 +3,7 @@
         "accountName": "ddb1",
         "resourceGroupName": "rg1",
         "subscriptionId": "subid",
-        "api-version": "2015-04-08",
+        "api-version": "1234-12-15",
         "databaseRid": "databaseRid"
     },
     "responses": {

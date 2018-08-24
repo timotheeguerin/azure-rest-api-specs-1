@@ -3,7 +3,7 @@
   "info": {
     "title": "Cosmos DB",
     "description": "Azure Cosmos DB Database Service Resource Provider REST API",
-    "version": "2015-04-08"
+    "version": "1234-12-15"
   },
   "host": "management.azure.com",
   "schemes": [
@@ -2356,7 +2356,7 @@
       "in": "query",
       "required": true,
       "type": "string",
-      "description": "Version of the API to be used with the client request. The current version is 2015-04-08."
+      "description": "Version of the API to be used with the client request. The current version is 1234-12-15."
     },
     "resourceGroupNameParameter": {
       "name": "resourceGroupName",
