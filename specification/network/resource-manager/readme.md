@@ -4,10 +4,10 @@
 
 This is the AutoRest configuration file for Network.
 
-
-
 ---
+
 ## Getting Started
+
 To build the SDK for Network, simply [Install AutoRest](https://aka.ms/autorest/install) and in this folder, run:
 
 > `autorest`
@@ -15,22 +15,50 @@ To build the SDK for Network, simply [Install AutoRest](https://aka.ms/autorest/
 To see additional help and options, run:
 
 > `autorest --help`
+
 ---
 
 ## Configuration
 
-
-
 ### Basic Information
+
 These are the global settings for the Network API.
 
 ``` yaml
 title: NetworkManagementClient
 description: Network Client
 openapi-type: arm
-tag: package-2018-06
+tag: package-preview-1234-12
 ```
 
+
+### Tag: package-preview-1234-12
+
+These settings apply only when `--tag=package-preview-1234-12` is specified on the command line.
+
+```yaml $(tag) == 'package-preview-1234-12'
+input-file:
+  - Microsoft.Network/preview/1234-12-98/applicationGateway.json
+  - Microsoft.Network/preview/1234-12-98/applicationSecurityGroup.json
+  - Microsoft.Network/preview/1234-12-98/checkDnsAvailability.json
+  - Microsoft.Network/preview/1234-12-98/endpointService.json
+  - Microsoft.Network/preview/1234-12-98/expressRouteCircuit.json
+  - Microsoft.Network/preview/1234-12-98/loadBalancer.json
+  - Microsoft.Network/preview/1234-12-98/network.json
+  - Microsoft.Network/preview/1234-12-98/networkInterface.json
+  - Microsoft.Network/preview/1234-12-98/networkSecurityGroup.json
+  - Microsoft.Network/preview/1234-12-98/networkWatcher.json
+  - Microsoft.Network/preview/1234-12-98/operation.json
+  - Microsoft.Network/preview/1234-12-98/publicIpAddress.json
+  - Microsoft.Network/preview/1234-12-98/routeFilter.json
+  - Microsoft.Network/preview/1234-12-98/routeTable.json
+  - Microsoft.Network/preview/1234-12-98/serviceCommunity.json
+  - Microsoft.Network/preview/1234-12-98/usage.json
+  - Microsoft.Network/preview/1234-12-98/virtualNetwork.json
+  - Microsoft.Network/preview/1234-12-98/virtualNetworkGateway.json
+  - Microsoft.Network/preview/1234-12-98/vmssNetworkInterface.json
+  - Microsoft.Network/preview/1234-12-98/vmssPublicIpAddress.json
+```
 ### Tag: package-2018-06
 
 These settings apply only when `--tag=package-2018-06` is specified on the command line.
@@ -370,7 +398,6 @@ input-file:
 - Microsoft.Network/stable/2017-08-01/vmssPublicIpAddress.json
 ```
 
-
 ### Tag: package-2017-06
 
 These settings apply only when `--tag=package-2017-06` is specified on the command line.
@@ -396,7 +423,6 @@ input-file:
 - Microsoft.Network/stable/2017-06-01/vmssNetworkInterface.json
 - Microsoft.Network/stable/2017-06-01/vmssPublicIpAddress.json
 ```
-
 
 ### Tag: package-2017-03
 
@@ -551,6 +577,7 @@ input-file:
 ```
 
 ## Suppression
+
 ``` yaml
 directive:
   - suppress: RequiredPropertiesMissingInResourceModel
@@ -647,8 +674,8 @@ directive:
 ```
 
 ---
-# Code Generation
 
+# Code Generation
 
 ## Swagger to SDK
 
@@ -729,6 +756,7 @@ output-folder: $(go-sdk-folder)/services/network/mgmt/2018-02-01/network
 ```
 
 ## Suppression
+
 ``` yaml
 directive:
   - suppress: RequiredPropertiesMissingInResourceModel
@@ -865,7 +893,6 @@ Please also specify `--go-sdk-folder=<path to the root directory of your azure-s
 output-folder: $(go-sdk-folder)/services/preview/network/mgmt/2015-05-01-preview/network
 ```
 
-
 ## Java
 
 These settings apply only when `--java` is specified on the command line.
@@ -882,7 +909,7 @@ output-folder: $(azure-libraries-for-java-folder)/azure-mgmt-network
 
 ### Java multi-api
 
-```yaml $(java) && $(multiapi)
+``` yaml $(java) && $(multiapi)
 batch:
   - tag: package-2018-06
   - tag: package-2018-04
