@@ -35,20 +35,21 @@ tag: package-preview-2021-01
 directive:
   - suppress: OperationsAPIImplementation
     reason: we do have a operations api as "/providers/Microsoft.Authorization/operations"
-    #where:
-    #  -   $.paths["/providers/Microsoft.Authorization/operations"]
-
+  - where: '$.paths["/providers/Microsoft.Authorization/providerOperations/{resourceProviderNamespace}"].get.operationId'
+    from: authorization-RoleBasedCalls.json
+    suppress: OperationIdNounConflictingModelNames
+    reason: bla bla I want
 ```
-
 
 ### Tag: package-preview-2021-01
 
 These settings apply only when `--tag=package-preview-2021-01` is specified on the command line.
 
-```yaml $(tag) == 'package-preview-2021-01'
+``` yaml $(tag) == 'package-preview-2021-01'
 input-file:
   - Microsoft.Authorization/preview/2021-01-01-preview/authorization-RoleBasedCalls.json
 ```
+
 ### Tag: package-2015-07
 
 These settings apply only when `--tag=package-2015-07` is specified on the command line.
