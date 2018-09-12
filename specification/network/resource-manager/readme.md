@@ -4,10 +4,10 @@
 
 This is the AutoRest configuration file for Network.
 
-
-
 ---
+
 ## Getting Started
+
 To build the SDK for Network, simply [Install AutoRest](https://aka.ms/autorest/install) and in this folder, run:
 
 > `autorest`
@@ -15,22 +15,50 @@ To build the SDK for Network, simply [Install AutoRest](https://aka.ms/autorest/
 To see additional help and options, run:
 
 > `autorest --help`
+
 ---
 
 ## Configuration
 
-
-
 ### Basic Information
+
 These are the global settings for the Network API.
 
 ``` yaml
 title: NetworkManagementClient
 description: Network Client
 openapi-type: arm
-tag: package-2018-07
+tag: package-3123-32
 ```
 
+
+### Tag: package-3123-32
+
+These settings apply only when `--tag=package-3123-32` is specified on the command line.
+
+```yaml $(tag) == 'package-3123-32'
+input-file:
+  - Microsoft.Network/stable/3123-32-23/applicationGateway.json
+  - Microsoft.Network/stable/3123-32-23/applicationSecurityGroup.json
+  - Microsoft.Network/stable/3123-32-23/checkDnsAvailability.json
+  - Microsoft.Network/stable/3123-32-23/endpointService.json
+  - Microsoft.Network/stable/3123-32-23/expressRouteCircuit.json
+  - Microsoft.Network/stable/3123-32-23/loadBalancer.json
+  - Microsoft.Network/stable/3123-32-23/network.json
+  - Microsoft.Network/stable/3123-32-23/networkInterface.json
+  - Microsoft.Network/stable/3123-32-23/networkSecurityGroup.json
+  - Microsoft.Network/stable/3123-32-23/networkWatcher.json
+  - Microsoft.Network/stable/3123-32-23/operation.json
+  - Microsoft.Network/stable/3123-32-23/publicIpAddress.json
+  - Microsoft.Network/stable/3123-32-23/routeFilter.json
+  - Microsoft.Network/stable/3123-32-23/routeTable.json
+  - Microsoft.Network/stable/3123-32-23/serviceCommunity.json
+  - Microsoft.Network/stable/3123-32-23/usage.json
+  - Microsoft.Network/stable/3123-32-23/virtualNetwork.json
+  - Microsoft.Network/stable/3123-32-23/virtualNetworkGateway.json
+  - Microsoft.Network/stable/3123-32-23/vmssNetworkInterface.json
+  - Microsoft.Network/stable/3123-32-23/vmssPublicIpAddress.json
+```
 ### Tag: package-2018-07
 
 These settings apply only when `--tag=package-2018-07` is specified on the command line.
@@ -405,7 +433,6 @@ input-file:
 - Microsoft.Network/stable/2017-08-01/vmssPublicIpAddress.json
 ```
 
-
 ### Tag: package-2017-06
 
 These settings apply only when `--tag=package-2017-06` is specified on the command line.
@@ -431,7 +458,6 @@ input-file:
 - Microsoft.Network/stable/2017-06-01/vmssNetworkInterface.json
 - Microsoft.Network/stable/2017-06-01/vmssPublicIpAddress.json
 ```
-
 
 ### Tag: package-2017-03
 
@@ -586,6 +612,7 @@ input-file:
 ```
 
 ## Suppression
+
 ``` yaml
 directive:
   - suppress: RequiredPropertiesMissingInResourceModel
@@ -688,8 +715,8 @@ directive:
 ```
 
 ---
-# Code Generation
 
+# Code Generation
 
 ## Swagger to SDK
 
@@ -710,6 +737,7 @@ swagger-to-sdk:
 ```
 
 ## Suppression
+
 ``` yaml
 directive:
   - suppress: RequiredPropertiesMissingInResourceModel
@@ -745,7 +773,7 @@ output-folder: $(azure-libraries-for-java-folder)/azure-mgmt-network
 
 ### Java multi-api
 
-```yaml $(java) && $(multiapi)
+``` yaml $(java) && $(multiapi)
 batch:
   - tag: package-2018-06
   - tag: package-2018-04
