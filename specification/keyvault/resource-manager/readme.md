@@ -4,10 +4,10 @@
 
 This is the AutoRest configuration file for KeyVault.
 
-
-
 ---
+
 ## Getting Started
+
 To build the SDK for KeyVault, simply [Install AutoRest](https://aka.ms/autorest/install) and in this folder, run:
 
 > `autorest`
@@ -15,21 +15,29 @@ To build the SDK for KeyVault, simply [Install AutoRest](https://aka.ms/autorest
 To see additional help and options, run:
 
 > `autorest --help`
+
 ---
 
 ## Configuration
 
-
-
 ### Basic Information
+
 These are the global settings for the KeyVault API.
 
 ``` yaml
 openapi-type: arm
-tag: package-2018-02
+tag: package-preview-2018-09
 ```
 
 
+### Tag: package-preview-2018-09
+
+These settings apply only when `--tag=package-preview-2018-09` is specified on the command line.
+
+```yaml $(tag) == 'package-preview-2018-09'
+input-file:
+  - Microsoft.KeyVault/preview/2018-09-17-preview/keyvault.json
+```
 ### Tag: package-2018-02
 
 These settings apply only when `--tag=package-2018-02` is specified on the command line.
@@ -39,8 +47,6 @@ input-file:
 - Microsoft.KeyVault/stable/2018-02-14/keyvault.json
 - Microsoft.KeyVault/stable/2018-02-14/providers.json
 ```
-
-
 
 ### Tag: package-2016-10
 
@@ -52,7 +58,6 @@ input-file:
 - Microsoft.KeyVault/stable/2016-10-01/providers.json
 ```
 
-
 ### Tag: package-2015-06
 
 These settings apply only when `--tag=package-2015-06` is specified on the command line.
@@ -62,10 +67,9 @@ input-file:
 - Microsoft.KeyVault/stable/2015-06-01/keyvault.json
 ```
 
-
 ---
-# Code Generation
 
+# Code Generation
 
 ## Swagger to SDK
 
@@ -84,7 +88,6 @@ swagger-to-sdk:
     after_scripts:
       - bundle install && rake arm:regen_all_profiles['azure_mgmt_key_vault']
 ```
-
 
 ## Go
 
@@ -133,7 +136,6 @@ Please also specify `--go-sdk-folder=<path to the root directory of your azure-s
 output-folder: $(go-sdk-folder)/services/keyvault/mgmt/2015-06-01/keyvault
 ```
 
-
 ## Java
 
 These settings apply only when `--java` is specified on the command line.
@@ -149,7 +151,7 @@ output-folder: $(azure-libraries-for-java-folder)/azure-mgmt-keyvault
 
 ### Java multi-api
 
-```yaml $(java) && $(multiapi)
+``` yaml $(java) && $(multiapi)
 batch:
   - tag: package-2016-10
   - tag: package-2015-06
