@@ -1,7 +1,7 @@
 {
   "parameters": {
     "resourceGroupName": "default-azurebatch-japaneast",
-    "api-version": "2017-05-01",
+    "api-version": "2019-01-03",
     "subscriptionId": "subid"
   },
   "responses": {
