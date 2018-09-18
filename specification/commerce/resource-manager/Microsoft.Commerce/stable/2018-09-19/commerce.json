@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "UsageManagementClient",
-    "version": "2015-06-01-preview"
+    "version": "2018-09-19"
   },
   "host": "management.azure.com",
   "schemes": [
