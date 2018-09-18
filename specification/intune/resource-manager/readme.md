@@ -1,13 +1,13 @@
 # Intune
-    
+
 > see https://aka.ms/autorest
 
 This is the AutoRest configuration file for Intune.
 
-
-
 ---
-## Getting Started 
+
+## Getting Started
+
 To build the SDK for Intune, simply [Install AutoRest](https://aka.ms/autorest/install) and in this folder, run:
 
 > `autorest`
@@ -15,21 +15,29 @@ To build the SDK for Intune, simply [Install AutoRest](https://aka.ms/autorest/i
 To see additional help and options, run:
 
 > `autorest --help`
+
 ---
 
 ## Configuration
 
+### Basic Information
 
-
-### Basic Information 
 These are the global settings for the Intune API.
 
 ``` yaml
 openapi-type: arm
-tag: package-2015-01-preview
+tag: package-2018-09
 ```
 
 
+### Tag: package-2018-09
+
+These settings apply only when `--tag=package-2018-09` is specified on the command line.
+
+```yaml $(tag) == 'package-2018-09'
+input-file:
+  - Microsoft.Intune/stable/2018-09-07/intune.json
+```
 ### Tag: package-2015-01-preview
 
 These settings apply only when `--tag=package-2015-01-preview` is specified on the command line.
@@ -38,7 +46,7 @@ These settings apply only when `--tag=package-2015-01-preview` is specified on t
 input-file:
 - Microsoft.Intune/preview/2015-01-14-preview/intune.json
 ```
- 
+
 ### Tag: package-2015-01-privatepreview
 
 These settings apply only when `--tag=package-2015-01-privatepreview` is specified on the command line.
@@ -49,9 +57,10 @@ input-file:
 ```
 
 ---
+
 # Code Generation
 
-## C# 
+## C#
 
 These settings apply only when `--csharp` is specified on the command line.
 Please also specify `--csharp-sdks-folder=<path to "SDKs" directory of your azure-sdk-for-net clone>`.
