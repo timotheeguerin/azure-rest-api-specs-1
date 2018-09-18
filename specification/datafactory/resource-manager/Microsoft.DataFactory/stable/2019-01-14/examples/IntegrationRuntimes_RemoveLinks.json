@@ -7,7 +7,7 @@
     "linkedIntegrationRuntimeRequest": {
       "factoryName": "exampleFactoryName-linked"
     },
-    "api-version": "2018-06-01"
+    "api-version": "2019-01-14"
   },
   "responses": {
     "200": {
