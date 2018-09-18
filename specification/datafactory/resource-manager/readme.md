@@ -4,10 +4,10 @@
 
 This is the AutoRest configuration file for Data Factory V2.
 
-
-
 ---
+
 ## Getting Started
+
 To build the SDK for Data Factory V2, simply [Install AutoRest](https://aka.ms/autorest/install) and in this folder, run:
 
 > `autorest`
@@ -15,21 +15,31 @@ To build the SDK for Data Factory V2, simply [Install AutoRest](https://aka.ms/a
 To see additional help and options, run:
 
 > `autorest --help`
+
 ---
 
 ## Configuration
 
-
 ### Basic Information
+
 These are the global settings for the Data Factory V2 API.
 
 ``` yaml
 title: DataFactoryManagementClient
 description: The Azure Data Factory V2 management API provides a RESTful set of web services that interact with Azure Data Factory V2 services.
 openapi-type: arm
-tag: package-2018-06
+tag: package-2019-01
 ```
 
+
+### Tag: package-2019-01
+
+These settings apply only when `--tag=package-2019-01` is specified on the command line.
+
+```yaml $(tag) == 'package-2019-01'
+input-file:
+  - Microsoft.DataFactory/stable/2019-01-14/datafactory.json
+```
 ### Tag: package-2018-06
 
 These settings apply only when `--tag=package-2018-06` is specified on the command line.
@@ -49,8 +59,8 @@ input-file:
 ```
 
 ---
-# Code Generation
 
+# Code Generation
 
 ## Swagger to SDK
 
@@ -64,7 +74,6 @@ swagger-to-sdk:
   - repo: azure-sdk-for-go
   - repo: azure-sdk-for-node
 ```
-
 
 ## C#
 
@@ -97,17 +106,18 @@ python:
   package-version: 1.0.0
   clear-output-folder: true
 ```
+
 ``` yaml $(python) && $(python-mode) == 'update'
 python:
   no-namespace-folders: true
   output-folder: $(python-sdks-folder)/azure-mgmt-datafactory/azure/mgmt/datafactory
 ```
+
 ``` yaml $(python) && $(python-mode) == 'create'
 python:
   basic-setup-py: true
   output-folder: $(python-sdks-folder)/azure-mgmt-datafactory
 ```
-
 
 ## Go
 
@@ -162,7 +172,6 @@ output-folder: $(azure-libraries-for-java-folder)/azure-mgmt-datafactory
 
 # Validation
 
-
 ### Java multi-api
 
 ``` yaml $(java) && $(multiapi)
@@ -196,7 +205,6 @@ java:
 regenerate-manager: true
 generate-interface: true
 ```
-
 
 ## Suppression
 
