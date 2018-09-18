@@ -1,7 +1,7 @@
 {
   "parameters": {
     "roleAssignmentId": "roleassignmentId",
-    "api-version": "2015-07-01"
+    "api-version": "2018-01-01"
   },
   "responses": {
     "200": {
