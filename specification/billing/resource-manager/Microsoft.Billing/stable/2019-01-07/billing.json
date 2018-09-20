@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "version": "2017-04-24-preview",
+    "version": "2019-01-07",
     "title": "BillingManagementClient",
     "description": "Billing client provides access to billing resources for Azure Web-Direct subscriptions. Other subscription types which were not purchased directly through the Azure web portal are not supported through this preview API."
   },
@@ -572,7 +572,7 @@
       "in": "query",
       "required": true,
       "type": "string",
-      "description": "Version of the API to be used with the client request. The current version is 2017-04-24-preview."
+      "description": "Version of the API to be used with the client request. The current version is 2019-01-07."
     },
     "subscriptionIdParameter": {
       "name": "subscriptionId",
