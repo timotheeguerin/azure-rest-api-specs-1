@@ -1,6 +1,6 @@
 {
   "parameters": {
-    "api-version": "2017-04-24-preview",
+    "api-version": "2019-08-08",
     "subscriptionId": "subid",
     "invoiceName": "2017-02-05-123456789"
   },
