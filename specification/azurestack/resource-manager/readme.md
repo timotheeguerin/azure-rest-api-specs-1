@@ -4,16 +4,16 @@
 
 This is the AutoRest configuration file for Azure Stack.
 
-
 The Azure Stack RP comprises of small services where each service has its own tag.
 Hence, each sub-service has its own swagger spec.
 
 All of them are tied together using this configuration and are packaged together into one Azure Stack client library.
 This makes it easier for customers to download one (nuget/npm/pip/maven/gem) Azure Stack client library package rather than installing individual packages for each sub service.
 
-
 ---
+
 ## Getting Started
+
 To build the SDK for Azure Stack, simply [Install AutoRest](https://aka.ms/autorest/install) and in this folder, run:
 
 > `autorest`
@@ -21,21 +21,34 @@ To build the SDK for Azure Stack, simply [Install AutoRest](https://aka.ms/autor
 To see additional help and options, run:
 
 > `autorest --help`
+
 ---
 
 ## Configuration
 
-
 ### Basic Information
+
 These are the global settings for the Azure Stack API.
 
 ``` yaml
 title: AzureStackManagementClient
 description: Azure Stack
 openapi-type: arm
-tag: package-2017-06-01
+tag: package-2014-04
 ```
 
+
+### Tag: package-2014-04
+
+These settings apply only when `--tag=package-2014-04` is specified on the command line.
+
+```yaml $(tag) == 'package-2014-04'
+input-file:
+  - Microsoft.AzureStack/stable/2014-04-06/AzureStack.json
+  - Microsoft.AzureStack/stable/2014-04-06/CustomerSubscription.json
+  - Microsoft.AzureStack/stable/2014-04-06/Product.json
+  - Microsoft.AzureStack/stable/2014-04-06/Registration.json
+```
 ### Tag: package-2017-06-01
 
 These settings apply only when `--tag=package-2017-06-01` is specified on the command line.
@@ -51,6 +64,7 @@ input-file:
 ---
 
 ### Validations
+
 Run validations when `--validate` is specified on command line
 
 ``` yaml $(validate)
@@ -61,6 +75,7 @@ message-format: json
 ```
 
 ---
+
 # Code Generation
 
 ## Swagger to SDK
@@ -165,5 +180,3 @@ java:
 regenerate-manager: true
 generate-interface: true
 ```
-
-
