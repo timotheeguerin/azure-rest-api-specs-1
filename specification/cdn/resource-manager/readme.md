@@ -127,4 +127,8 @@ directive:
     from: cdn.json
     suppress: OBJECT_ADDITIONAL_PROPERTIES
     reason: test
+  - where: '$[""].definitions.Profile'
+    from: cdn.json
+    suppress: OBJECT_ADDITIONAL_PROPERTIES
+    reason: ''
 ```
