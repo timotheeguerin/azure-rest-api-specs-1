@@ -123,14 +123,6 @@ See configuration in [readme.ruby.md](./readme.ruby.md)
 
 ``` yaml
 directive:
-  - where: '$[""].definitions.Profile'
-    from: cdn.json
-    suppress: OBJECT_ADDITIONAL_PROPERTIES
-    reason: test
-  - where: '$[""].definitions.Profile'
-    from: cdn.json
-    suppress: OBJECT_ADDITIONAL_PROPERTIES
-    reason: ''
   - where: $.definitions.Profile
     from: cdn.json
     suppress: OBJECT_ADDITIONAL_PROPERTIES
