@@ -143,4 +143,8 @@ directive:
     from: cdn.json
     suppress: OBJECT_ADDITIONAL_PROPERTIES
     reason: ''
+  - where: ''
+    from: ''
+    suppress: RESPONSE_STATUS_CODE_NOT_IN_EXAMPLE
+    reason: ''
 ```
