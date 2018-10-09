@@ -139,4 +139,8 @@ directive:
     from: cdn.json
     suppress: OneUnderscoreInOperationId
     reason: ''
+  - where: $.definitions.EndpointProperties
+    from: cdn.json
+    suppress: OBJECT_ADDITIONAL_PROPERTIES
+    reason: ''
 ```
