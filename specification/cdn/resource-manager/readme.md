@@ -147,4 +147,8 @@ directive:
     from: ''
     suppress: RESPONSE_STATUS_CODE_NOT_IN_EXAMPLE
     reason: ''
+  - where: ''
+    from: ''
+    suppress: RESPONSE_STATUS_CODE_NOT_IN_EXAMPLE
+    reason: ''
 ```
