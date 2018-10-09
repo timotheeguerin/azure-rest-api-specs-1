@@ -135,4 +135,8 @@ directive:
     from: cdn.json
     suppress: OBJECT_MISSING_REQUIRED_PROPERTY
     reason: ''
+  - where: '$.paths["/subscriptions/{subscriptionId}/providers/Microsoft.Cdn/profiles"].get.operationId'
+    from: cdn.json
+    suppress: OneUnderscoreInOperationId
+    reason: ''
 ```
