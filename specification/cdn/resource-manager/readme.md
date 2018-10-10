@@ -155,4 +155,8 @@ directive:
     reason: asdf
     where: asdf
     from: asdf
+  - suppress: OBJECT_ADDITIONAL_PROPERTIES
+    from: cdn.json
+    where: $.definitions.Endpoint
+    reason: reason
 ```
