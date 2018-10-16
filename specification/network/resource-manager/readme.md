@@ -4,10 +4,10 @@
 
 This is the AutoRest configuration file for Network.
 
-
-
 ---
+
 ## Getting Started
+
 To build the SDK for Network, simply [Install AutoRest](https://aka.ms/autorest/install) and in this folder, run:
 
 > `autorest`
@@ -15,13 +15,13 @@ To build the SDK for Network, simply [Install AutoRest](https://aka.ms/autorest/
 To see additional help and options, run:
 
 > `autorest --help`
+
 ---
 
 ## Configuration
 
-
-
 ### Basic Information
+
 These are the global settings for the Network API.
 
 ``` yaml
@@ -405,7 +405,6 @@ input-file:
 - Microsoft.Network/stable/2017-08-01/vmssPublicIpAddress.json
 ```
 
-
 ### Tag: package-2017-06
 
 These settings apply only when `--tag=package-2017-06` is specified on the command line.
@@ -431,7 +430,6 @@ input-file:
 - Microsoft.Network/stable/2017-06-01/vmssNetworkInterface.json
 - Microsoft.Network/stable/2017-06-01/vmssPublicIpAddress.json
 ```
-
 
 ### Tag: package-2017-03
 
@@ -586,6 +584,7 @@ input-file:
 ```
 
 ## Suppression
+
 ``` yaml
 directive:
   - suppress: RequiredPropertiesMissingInResourceModel
@@ -688,8 +687,8 @@ directive:
 ```
 
 ---
-# Code Generation
 
+# Code Generation
 
 ## Swagger to SDK
 
@@ -710,11 +709,12 @@ swagger-to-sdk:
 ```
 
 ## Suppression
+
 ``` yaml
 directive:
   - suppress: RequiredPropertiesMissingInResourceModel
     from: virtualWan.json
-    reason: name, id and type properties are inherited from the upper level
+    reason: 'name, id and type properties are inherited from the upper level'
   - suppress: RequiredPropertiesMissingInResourceModel
     from: networkwatcher.json
     where: $.definitions.PacketCaptureResult
@@ -722,11 +722,15 @@ directive:
   - suppress: RequiredPropertiesMissingInResourceModel
     from: networkwatcher.json
     where: $.definitions.NetworkWatcher
-    reason: Network watcher has reference on resource in network.json which contain 'name, 'id' and 'type'
+    reason: 'Network watcher has reference on resource in network.json which contain ''name, ''id'' and ''type'''
   - suppress: DefinitionsPropertiesNamesCamelCase
     from: networkwatcher.json
     where: $.definitions.ProtocolConfiguration.properties.HTTPConfiguration
     reason: Accidentally shipped with wrong casing - however fixing the casing is introducing a breaking change which is worse than living with the naming violation
+  - suppress: OBJECT_MISSING_REQUIRED_PROPERTY
+    from: virtualNetworkGateway.json
+    where: $.definitions.LocalNetworkGateway
+    reason: test
 ```
 
 ## Java
@@ -745,7 +749,7 @@ output-folder: $(azure-libraries-for-java-folder)/azure-mgmt-network
 
 ### Java multi-api
 
-```yaml $(java) && $(multiapi)
+``` yaml $(java) && $(multiapi)
 batch:
   - tag: package-2018-06
   - tag: package-2018-04
