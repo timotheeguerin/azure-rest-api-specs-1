@@ -3,7 +3,7 @@
   "info": {
     "title": "DataLakeStoreAccountManagementClient",
     "description": "Creates an Azure Data Lake Store account management client.",
-    "version": "2016-11-01",
+    "version": "2018-09-09",
     "x-ms-code-generation-settings": {
       "internalConstructors": true
     }
