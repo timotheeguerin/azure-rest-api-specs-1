@@ -4,10 +4,10 @@
 
 This is the AutoRest configuration file for DataLakeStore.
 
-
-
 ---
+
 ## Getting Started
+
 To build the SDK for DataLakeStore, simply [Install AutoRest](https://aka.ms/autorest/install) and in this folder, run:
 
 > `autorest`
@@ -15,21 +15,29 @@ To build the SDK for DataLakeStore, simply [Install AutoRest](https://aka.ms/aut
 To see additional help and options, run:
 
 > `autorest --help`
+
 ---
 
 ## Configuration
 
-
-
 ### Basic Information
+
 These are the global settings for the DataLakeStore API.
 
 ``` yaml
 openapi-type: arm
-tag: package-2016-11
+tag: package-2018-09
 ```
 
 
+### Tag: package-2018-09
+
+These settings apply only when `--tag=package-2018-09` is specified on the command line.
+
+```yaml $(tag) == 'package-2018-09'
+input-file:
+  - Microsoft.DataLakeStore/stable/2018-09-09/account.json
+```
 ### Tag: package-2016-11
 
 These settings apply only when `--tag=package-2016-11` is specified on the command line.
@@ -51,6 +59,7 @@ input-file:
 ```
 
 ## Suppression
+
 ``` yaml
 directive:
   - suppress: TrackedResourceGetOperation
@@ -65,8 +74,8 @@ directive:
 ```
 
 ---
-# Code Generation
 
+# Code Generation
 
 ## Swagger to SDK
 
@@ -83,7 +92,6 @@ swagger-to-sdk:
     after_scripts:
       - bundle install && rake arm:regen_all_profiles['azure_mgmt_datalake_store']
 ```
-
 
 ## C#
 
@@ -115,17 +123,18 @@ python:
   package-name: azure-mgmt-datalake-store
   clear-output-folder: true
 ```
+
 ``` yaml $(python) && $(python-mode) == 'update'
 python:
   no-namespace-folders: true
   output-folder: $(python-sdks-folder)/azure-mgmt-datalake-store/azure/mgmt/datalake/store
 ```
+
 ``` yaml $(python) && $(python-mode) == 'create'
 python:
   basic-setup-py: true
   output-folder: $(python-sdks-folder)/azure-mgmt-datalake-store
 ```
-
 
 ## Go
 
@@ -163,7 +172,6 @@ Please also specify `--go-sdk-folder=<path to the root directory of your azure-s
 ``` yaml $(tag) == 'package-2015-10-preview' && $(go)
 output-folder: $(go-sdk-folder)/services/preview/datalake/store/mgmt/2015-10-01-preview/account
 ```
-
 
 ## Java
 
@@ -211,5 +219,3 @@ java:
 regenerate-manager: true
 generate-interface: true
 ```
-
-
