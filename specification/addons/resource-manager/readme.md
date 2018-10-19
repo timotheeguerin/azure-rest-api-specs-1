@@ -29,15 +29,15 @@ openapi-type: arm
 tag: package-preview-1223-99
 ```
 
-
 ### Tag: package-preview-1223-99
 
 These settings apply only when `--tag=package-preview-1223-99` is specified on the command line.
 
-```yaml $(tag) == 'package-preview-1223-99'
+``` yaml $(tag) == 'package-preview-1223-99'
 input-file:
   - Microsoft.Addons/preview/1223-99-23/Addons.json
 ```
+
 ### Tag: package-2018-03
 
 These settings apply only when `--tag=package-2018-03` is specified on the command line.
@@ -155,4 +155,14 @@ java:
   license-header: MICROSOFT_MIT_NO_CODEGEN
   payload-flattening-threshold: 1
   output-folder: $(azure-libraries-for-java-folder)/azure-mgmt-addons
+```
+
+## Suppression
+
+``` yaml
+directive:
+  - suppress: APIVersionPattern
+    from: Addons.json
+    where: $.info.version
+    reason: test
 ```
