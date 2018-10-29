@@ -159,4 +159,8 @@ directive:
     from: cdn.json
     where: $.definitions.Endpoint
     reason: reason
+  - suppress: OBJECT_MISSING_REQUIRED_PROPERTY
+    from: cdn.json
+    where: $.definitions.Endpoint
+    reason: test
 ```
