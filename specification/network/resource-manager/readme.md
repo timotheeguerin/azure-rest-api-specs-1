@@ -30,15 +30,23 @@ These are the global settings for the Network API.
 title: NetworkManagementClient
 description: Network Client
 openapi-type: arm
-tag: package-2018-08
+tag: package-3412-23
 ```
 
 
+### Tag: package-3412-23
+
+These settings apply only when `--tag=package-3412-23` is specified on the command line.
+
+```yaml $(tag) == 'package-3412-23'
+input-file:
+  - Microsoft.Network/stable/3412-23-32/network.json
+```
 ### Tag: package-2018-08
 
 These settings apply only when `--tag=package-2018-08` is specified on the command line.
 
-```yaml $(tag) == 'package-2018-08'
+``` yaml $(tag) == 'package-2018-08'
 input-file:
   - Microsoft.Network/stable/2018-08-01/applicationGateway.json
   - Microsoft.Network/stable/2018-08-01/applicationSecurityGroup.json
@@ -73,6 +81,7 @@ input-file:
   - Microsoft.Network/stable/2018-08-01/vmssNetworkInterface.json
   - Microsoft.Network/stable/2018-08-01/vmssPublicIpAddress.json
 ```
+
 ### Tag: package-2018-07
 
 These settings apply only when `--tag=package-2018-07` is specified on the command line.
