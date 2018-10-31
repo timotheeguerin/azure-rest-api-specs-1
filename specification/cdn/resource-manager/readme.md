@@ -163,4 +163,8 @@ directive:
     from: cdn.json
     where: $.definitions.Endpoint
     reason: test
+  - suppress: RESPONSE_STATUS_CODE_NOT_IN_EXAMPLE
+    from: tes
+    where: tes
+    reason: tes
 ```
