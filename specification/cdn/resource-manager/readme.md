@@ -127,4 +127,8 @@ directive:
     from: cdn.json
     suppress: OBJECT_ADDITIONAL_PROPERTIES
     reason: ''
+  - suppress: OBJECT_MISSING_REQUIRED_PROPERTY
+    where: $.definitions.Profile
+    from: cdn.json
+    reason: ''
 ```
