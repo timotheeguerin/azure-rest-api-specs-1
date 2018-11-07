@@ -26,9 +26,24 @@ These are the global settings for the MediaServices API.
 
 ``` yaml
 openapi-type: arm
-tag: package-2018-06-preview
+tag: package-preview-2019-01
 ```
 
+
+### Tag: package-preview-2019-01
+
+These settings apply only when `--tag=package-preview-2019-01` is specified on the command line.
+
+```yaml $(tag) == 'package-preview-2019-01'
+input-file:
+  - Microsoft.Media/preview/2019-01-13-preview/Accounts.json
+  - Microsoft.Media/preview/2019-01-13-preview/Assets.json
+  - Microsoft.Media/preview/2019-01-13-preview/Common.json
+  - Microsoft.Media/preview/2019-01-13-preview/ContentKeyPolicies.json
+  - Microsoft.Media/preview/2019-01-13-preview/Encoding.json
+  - Microsoft.Media/preview/2019-01-13-preview/StreamingPoliciesAndStreamingLocators.json
+  - Microsoft.Media/preview/2019-01-13-preview/streamingservice.json
+```
 ### Tag: package-2015-10
 
 These settings apply only when `--tag=package-2015-10` is specified on the command line.
