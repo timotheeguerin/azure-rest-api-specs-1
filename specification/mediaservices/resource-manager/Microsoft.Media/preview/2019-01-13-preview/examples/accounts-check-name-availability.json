@@ -6,7 +6,7 @@
       "name": "contosonew",
       "type": "Microsoft.Media/MediaService"
     },
-    "api-version": "2018-06-01-preview"
+    "api-version": "2019-01-13-preview"
   },
   "responses": {
     "200": {
