@@ -1,6 +1,6 @@
 {
    "parameters":{
-      "api-version":"2018-02-01",
+      "api-version":"2022-03-22",
       "name":"newsiteinnewASE-NCUS",
 	  "slot":"Production",
       "resourceGroupName":"Default-Web-NorthCentralUS",
