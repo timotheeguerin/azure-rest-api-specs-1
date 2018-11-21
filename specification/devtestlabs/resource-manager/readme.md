@@ -203,4 +203,8 @@ directive:
     from: DTL.json
     where: $.definitions.CloudErrorBody.properties.code
     reason: Test don't merge
+  - suppress: APIVersionPattern
+    from: DTL.json
+    where: $.info.version
+    reason: suppress
 ```
