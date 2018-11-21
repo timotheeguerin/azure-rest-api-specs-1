@@ -211,4 +211,8 @@ directive:
     from: DTL.json
     where: $.definitions.CloudErrorBody.properties.target
     reason: frejifrijfr
+  - suppress: TrackedResourceListByImmediateParent
+    from: DTL.json
+    where: $.definitions
+    reason: testing warning
 ```
