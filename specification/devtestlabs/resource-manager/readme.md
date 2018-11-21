@@ -235,4 +235,8 @@ directive:
     from: DTL.json
     where: $.definitions.CloudErrorBody.properties.message
     reason: test
+  - suppress: EnumInsteadOfBoolean
+    from: DTL.json
+    where: $.definitions.LabVirtualMachineCreationParameterProperties.properties.disallowPublicIpAddress
+    reason: adsfasdf
 ```
