@@ -219,4 +219,8 @@ directive:
     from: DTL.json
     where: '$.paths["/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/policysets/{name}/evaluatePolicies"].post.operationId'
     reason: testing error suppression
+  - suppress: XmsExamplesRequired
+    from: DTL.json
+    where: $.paths
+    reason: testing doc suppress
 ```
