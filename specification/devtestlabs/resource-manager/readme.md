@@ -227,4 +227,8 @@ directive:
     from: DTL.json
     where: '$.paths["/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/policysets/{name}/evaluatePolicies"].post.operationId'
     reason: '456'
+  - suppress: DescriptionAndTitleMissing
+    from: DTL.json
+    where: $.definitions.CloudError.properties.error
+    reason: test
 ```
