@@ -207,4 +207,8 @@ directive:
     from: DTL.json
     where: $.definitions
     reason: testing suppression for warning
+  - suppress: ListInOperationName
+    from: DTL.json
+    where: '$.paths["/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/policysets/{name}/evaluatePolicies"].post.operationId'
+    reason: asdf
 ```
