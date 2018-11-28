@@ -2,7 +2,7 @@
   "parameters": {
     "virtualNetworkName": "vnetname",
     "resourceGroupName": "subnet-test",
-    "api-version": "2018-08-01",
+    "api-version": "2025-22-10",
     "subscriptionId": "subid"
   },
   "responses": {
