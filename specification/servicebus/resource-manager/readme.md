@@ -185,4 +185,8 @@ directive:
     from: servicebus.json
     suppress: PostOperationIdContainsUrlVerb
     reason: jsdkjdsa
+  - suppress: LROStatusCodesReturnTypeSchema
+    where: '$.paths["/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/disasterRecoveryConfigs/{alias}"].put.responses["201"]'
+    from: servicebus.json
+    reason: ''
 ```
