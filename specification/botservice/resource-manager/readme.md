@@ -4,8 +4,6 @@
 
 This is the AutoRest configuration file for BotService.
 
-
-
 ---
 
 ### Java multi-api
@@ -16,6 +14,15 @@ batch:
   - tag: package-2018-07-12
 ```
 
+
+### Tag: package-2010-10
+
+These settings apply only when `--tag=package-2010-10` is specified on the command line.
+
+```yaml $(tag) == 'package-2010-10'
+input-file:
+  - Microsoft.BotService/stable/2010-10-21/botservice.json
+```
 ### Tag: package-2018-07-12 and java
 
 These settings apply only when `--tag=package-2018-07-12 --java` is specified on the command line.
@@ -28,6 +35,7 @@ java:
 regenerate-manager: true
 generate-interface: true
 ```
+
 ### Tag: package-2017-12-01 and java
 
 These settings apply only when `--tag=package-2017-12-01 --java` is specified on the command line.
@@ -42,6 +50,7 @@ generate-interface: true
 ```
 
 ## Getting Started
+
 To build the SDK for BotService, simply [Install AutoRest](https://aka.ms/autorest/install) and in this folder, run:
 
 > `autorest`
@@ -49,18 +58,18 @@ To build the SDK for BotService, simply [Install AutoRest](https://aka.ms/autore
 To see additional help and options, run:
 
 > `autorest --help`
+
 ---
 
 ## Configuration
 
-
-
 ### Basic Information
+
 These are the global settings for the BotService API.
 
 ``` yaml
 openapi-type: arm
-tag: package-2018-07-12
+tag: package-2010-10
 ```
 
 ### Tag: package-2018-07-12
@@ -106,7 +115,9 @@ directive:
     from: botservice.json
     reason: The path as-is is quite descriptive.
 ```
+
 ---
+
 # Code Generation
 
 ## Swagger to SDK
