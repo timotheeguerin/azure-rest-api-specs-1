@@ -3,7 +3,7 @@
   "info": {
     "title": "Azure Bot Service",
     "description": "Azure Bot Service is a platform for creating smart conversational agents.",
-    "version": "2017-12-01"
+    "version": "2010-10-21"
   },
   "host": "management.azure.com",
   "schemes": [
@@ -2176,7 +2176,7 @@
       "in": "query",
       "required": true,
       "type": "string",
-      "description": "Version of the API to be used with the client request. Current version is 2017-12-01"
+      "description": "Version of the API to be used with the client request. Current version is 2010-10-21"
     },
     "connectionNameParameter": {
       "name": "connectionName",
