@@ -2,7 +2,7 @@
   "parameters": {
     "accountName": "sampleacct",
     "resourceGroupName": "default-azurebatch-japaneast",
-    "api-version": "2017-05-01",
+    "api-version": "2025-26-26",
     "subscriptionId": "subid"
   },
   "responses": {
