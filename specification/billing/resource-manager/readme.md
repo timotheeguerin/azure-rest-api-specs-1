@@ -4,10 +4,10 @@
 
 This is the AutoRest configuration file for Billing.
 
-
-
 ---
+
 ## Getting Started
+
 To build the SDK for Billing, simply [Install AutoRest](https://aka.ms/autorest/install) and in this folder, run:
 
 > `autorest`
@@ -15,21 +15,29 @@ To build the SDK for Billing, simply [Install AutoRest](https://aka.ms/autorest/
 To see additional help and options, run:
 
 > `autorest --help`
+
 ---
 
 ## Configuration
 
-
-
 ### Basic Information
+
 These are the global settings for the Billing API.
 
 ``` yaml
 openapi-type: arm
-tag: package-2018-03-preview
+tag: package-2010-01
 ```
 
 
+### Tag: package-2010-01
+
+These settings apply only when `--tag=package-2010-01` is specified on the command line.
+
+```yaml $(tag) == 'package-2010-01'
+input-file:
+  - Microsoft.Billing/stable/2010-01-09/billing.json
+```
 ### Tag: package-2018-03-preview
 
 These settings apply only when `--tag=package-2018-03-preview` is specified on the command line.
@@ -58,8 +66,8 @@ input-file:
 ```
 
 ---
-# Code Generation
 
+# Code Generation
 
 ## Swagger to SDK
 
@@ -77,7 +85,6 @@ swagger-to-sdk:
     after_scripts:
       - bundle install && rake arm:regen_all_profiles['azure_mgmt_billing']
 ```
-
 
 ## C#
 
@@ -114,11 +121,13 @@ python:
   package-version: 0.2.0
   clear-output-folder: true
 ```
+
 ``` yaml $(python) && $(python-mode) == 'update'
 python:
   no-namespace-folders: true
   output-folder: $(python-sdks-folder)/azure-mgmt-billing/azure/mgmt/billing
 ```
+
 ``` yaml $(python) && $(python-mode) == 'create'
 python:
   basic-setup-py: true
@@ -186,5 +195,3 @@ java:
 regenerate-manager: true
 generate-interface: true
 ```
-
-
