@@ -1,7 +1,7 @@
 {
     "swagger": "2.0",
     "info": {
-        "version": "2017-06-01",
+        "version": "2044-44-44",
         "title": "AzureStack Azure Bridge Client"
     },
     "host": "management.azure.com",
