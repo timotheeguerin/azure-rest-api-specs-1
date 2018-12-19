@@ -5,7 +5,9 @@
 This is the AutoRest configuration file for Blueprint.
 
 ---
+
 ## Getting Started
+
 To build the SDK for Blueprint, simply [Install AutoRest](https://aka.ms/autorest/install) and in this folder, run:
 
 > `autorest`
@@ -13,21 +15,32 @@ To build the SDK for Blueprint, simply [Install AutoRest](https://aka.ms/autores
 To see additional help and options, run:
 
 > `autorest --help`
+
 ---
 
 ## Configuration
 
 ### Basic Information
+
 These are the global settings for the Blueprint API.
 
 ``` yaml
 title: BlueprintManagementClient
 description: Blueprint Client
 openapi-type: arm
-tag: package-2017-11-preview
+tag: package-preview-2000-00
 ```
 
 
+### Tag: package-preview-2000-00
+
+These settings apply only when `--tag=package-preview-2000-00` is specified on the command line.
+
+```yaml $(tag) == 'package-preview-2000-00'
+input-file:
+  - Microsoft.Blueprint/preview/2000-00-00/blueprintAssignment.json
+  - Microsoft.Blueprint/preview/2000-00-00/blueprintDefinition.json
+```
 ### Tag: package-2017-11-preview
 
 These settings apply only when `--tag=package-2017-11-preview` is specified on the command line.
@@ -39,6 +52,7 @@ input-file:
 ```
 
 ---
+
 # Code Generation
 
 ## Swagger to SDK
@@ -51,7 +65,6 @@ swagger-to-sdk:
   - repo: azure-sdk-for-go
   - repo: azure-sdk-for-node
 ```
-
 
 ## C#
 
@@ -86,11 +99,13 @@ python:
   description: The Blueprint Client.
   clear-output-folder: true
 ```
+
 ``` yaml $(python) && $(python-mode) == 'update'
 python:
   no-namespace-folders: true
   output-folder: $(python-sdks-folder)/azure-mgmt-blueprint/azure/mgmt/blueprint
 ```
+
 ``` yaml $(python) && $(python-mode) == 'create'
 python:
   basic-setup-py: true
@@ -116,9 +131,7 @@ java:
   output-folder: $(azure-libraries-for-java-folder)/azure-mgmt-blueprint
 ```
 
-
 ## Suppression
-
 
 ``` yaml
 directive:
