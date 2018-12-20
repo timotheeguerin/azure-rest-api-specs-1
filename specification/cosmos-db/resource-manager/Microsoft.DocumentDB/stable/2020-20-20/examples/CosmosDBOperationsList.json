@@ -1,6 +1,6 @@
 {
   "parameters": {
-    "api-version": "2015-04-08"
+    "api-version": "2020-20-20"
   },
   "responses": {
     "200": {
