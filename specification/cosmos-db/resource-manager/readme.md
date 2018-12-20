@@ -4,10 +4,10 @@
 
 This is the AutoRest configuration file for Cosmos-DB.
 
-
-
 ---
+
 ## Getting Started
+
 To build the SDK for Cosmos-DB, simply [Install AutoRest](https://aka.ms/autorest/install) and in this folder, run:
 
 > `autorest`
@@ -15,21 +15,29 @@ To build the SDK for Cosmos-DB, simply [Install AutoRest](https://aka.ms/autores
 To see additional help and options, run:
 
 > `autorest --help`
+
 ---
 
 ## Configuration
 
-
-
 ### Basic Information
+
 These are the global settings for the Cosmos-DB API.
 
 ``` yaml
 openapi-type: arm
-tag: package-2015-04
+tag: package-2020-20
 ```
 
 
+### Tag: package-2020-20
+
+These settings apply only when `--tag=package-2020-20` is specified on the command line.
+
+```yaml $(tag) == 'package-2020-20'
+input-file:
+  - Microsoft.DocumentDB/stable/2020-20-20/cosmos-db.json
+```
 ### Tag: package-2015-04
 
 These settings apply only when `--tag=package-2015-04` is specified on the command line.
@@ -40,6 +48,7 @@ input-file:
 ```
 
 ## Suppression
+
 ``` yaml
 directive:
   - suppress: TrackedResourceGetOperation
@@ -85,8 +94,8 @@ directive:
 ```
 
 ---
-# Code Generation
 
+# Code Generation
 
 ## Swagger to SDK
 
@@ -101,7 +110,6 @@ swagger-to-sdk:
   - repo: azure-sdk-for-js
   - repo: azure-sdk-for-node
 ```
-
 
 ## Python
 
@@ -120,11 +128,13 @@ python:
   package-version: 0.3.0
   clear-output-folder: true
 ```
+
 ``` yaml $(python) && $(python-mode) == 'update'
 python:
   no-namespace-folders: true
   output-folder: $(python-sdks-folder)/azure-mgmt-cosmosdb/azure/mgmt/cosmosdb
 ```
+
 ``` yaml $(python) && $(python-mode) == 'create'
 python:
   basic-setup-py: true
@@ -168,5 +178,3 @@ java:
 regenerate-manager: true
 generate-interface: true
 ```
-
-
