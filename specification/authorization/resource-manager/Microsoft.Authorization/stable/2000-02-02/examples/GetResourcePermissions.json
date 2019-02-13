@@ -6,7 +6,7 @@
     "parentResourcePath": "parentResourcePath",
     "resourceType": "resourceType",
     "resourceName": "resourceName",
-    "api-version": "2018-09-01-preview"
+    "api-version": "2000-02-02"
   },
   "responses": {
     "200": {
