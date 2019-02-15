@@ -1,7 +1,7 @@
 {
   "name": "azure-rest-api-specs-tests",
   "private": true,
-  "author": {
+  "author": { 
     "name": "Microsoft Corporation",
     "email": "azsdkteam@microsoft.com",
     "url": "https://github.com/azure/azure-rest-api-specs"
