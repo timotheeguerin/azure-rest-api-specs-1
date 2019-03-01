@@ -74,7 +74,7 @@
           "Profiles"
         ],
         "summary": "Lists the CDN profiles within a resource group.",
-        "operationId": "Profiles_ListByResourceGroup",
+        "operationId": "Profiles_GetByResourceGroup",
         "parameters": [
           {
             "name": "resourceGroupName",
