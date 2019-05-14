@@ -10,22 +10,6 @@
   "consumes": [ "application/json" ],
   "produces": [ "application/json" ],
   "paths": {
-    "/providers/Microsoft.DevTestLab/operations": {
-      "get": {
-        "tags": [ "ProviderOperations" ],
-        "description": "Result of the request to list REST API operations",
-        "operationId": "ProviderOperations_List",
-        "parameters": [ { "$ref": "#/parameters/api-version" } ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "schema": { "$ref": "#/definitions/ProviderOperationResult" }
-          }
-        },
-        "x-ms-examples": { "ProviderOperations_List": { "$ref": "./examples/ProviderOperations_List.json" } },
-        "x-ms-pageable": { "nextLinkName": "nextLink" }
-      }
-    },
     "/subscriptions/{subscriptionId}/providers/Microsoft.DevTestLab/labs": {
       "get": {
         "tags": [ "Labs" ],
@@ -8758,14 +8742,6 @@
         },
         "osType": {
           "description": "The OS type of the virtual machine.",
-          "type": "string"
-        },
-        "size": {
-          "description": "The size of the virtual machine.",
-          "type": "string"
-        },
-        "userName": {
-          "description": "The user name of the virtual machine.",
           "type": "string"
         },
         "password": {
