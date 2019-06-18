@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "BatchManagement",
+    "title": "Wut is BatchManagement",
     "version": "2019-06-02",
     "x-ms-code-generation-settings": {
       "name": "BatchManagementClient"
